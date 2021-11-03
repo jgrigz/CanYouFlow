@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Detail</title>
+  </head>
+
+  
+    {% block content %}
+
+    <body>
+      <div class="profile-container">
+        <h1><b>{{target_user.username}}'s Profile</b></h1>
+      </div>
+    <div class="profile-container">
+      <div class="card" style="margin-top:20px; width: 500px; height: 250px; box-shadow:4px 4px 30px black;">
+        <div class="card-body">
+          <h5 class="card-title"><b>Username:</b> {{target_user.username}}</h5>
+          <p class="card-text">
+           <b>Bio:</b> {{target_user.bio}}
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Email:</b>{{target_user.email}}</li>
+        </ul>
+        <div class="card-body">
+          {% if request.user.username == target_user.username %}
+          <a href="/edit/{{target_user.id}}">
+          <button class="btn btn-warning" type="submit">Edit Profile</button>
+        </a>
+        <a href='/delete_account/{{target_user.id}}/'>
+          <button class="btn btn-danger" type="submit">Delete Account</button>
+        </a>
+          {% else %}
+          <a href="/message/user/{{target_user.id}}">
+          <button class="btn btn-success" type="submit">Message</button>
+        </a>
+          {% endif %}
+
+        </div>
+      </div>
+
+
+
+    </div>
+    </body>
+    {% endblock %}
+  </body>
+  </html>

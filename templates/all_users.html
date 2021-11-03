@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Users</title>
+  </head>
+
+  <body>
+    {% block content %}
+    <h2>All Users</h2>
+    {% for user in all_users %}
+    <ul>
+      <a href="/user_detail/{{user.id}}/">
+        <li>Username: {{ user.username }}</li>
+      </a>
+      <li>Email: {{ user.email }}</li>
+    </ul>
+    {% endfor %} {% endblock %}
+  </body>
+</html>
