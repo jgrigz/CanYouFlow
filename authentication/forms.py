@@ -1,6 +1,6 @@
 from django import forms 
 
-class SignUpForm(forms.Form):
+class RegisterForm(forms.Form):
     username = forms.CharField(max_length=30)
     password = forms.CharField(max_length=30, widget=forms.PasswordInput)
     full_name = forms.CharField(max_length=30)
@@ -8,7 +8,7 @@ class SignUpForm(forms.Form):
 
 
 class LoginForm(forms.Form):
-    email = forms.EmailField(max_length=30)
+    username = forms.CharField(max_length=30)
     password = forms.CharField(max_length=30, widget=forms.PasswordInput)
 
     class Meta: 
