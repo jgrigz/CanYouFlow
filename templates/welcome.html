@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+  <title>Home</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class='home-container'>
+    <h2>Welcome {{ logged_in_user }}</h2>
+    <h3>Lets start Rapping</h3>
+    <button class="btn btn-danger" type="button">Microphone ON</button>
+    <input type='text' id='my-text-box' value={{audio}} />
+  </div>
+  {% endblock %}
+</body>
+
+</html>
