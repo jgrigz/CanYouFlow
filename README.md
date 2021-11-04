@@ -49,6 +49,8 @@ Start server
     python manage.py runserver
 
 
+### Open a new terminal
+
 
 ### Client
 
