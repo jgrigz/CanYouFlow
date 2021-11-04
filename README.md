@@ -36,7 +36,7 @@ Download and install poetry
 
 Avtivate virtual environment
 
-cd server
+    cd server
 
     poetry shell
 
@@ -48,11 +48,11 @@ Start server
 
     python manage.py runserver
 
-cd ..
+
 
 ### Client
 
-cd client
+    cd client
 
 Install dependencies
 
