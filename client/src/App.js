@@ -7,7 +7,8 @@ import { IndexView } from "./components/views/IndexView";
 import { Login } from "./components/views/Login";
 import { Register } from "./components/views/Register";
 import { HomeView } from "./components/views/HomeView";
-import {} from "react-router-dom";
+import { StudioView } from "./components/views/StudioView";
+import { AllUsersView } from "./components/views/AllUsersView";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<HomeView />} />
+          <Route path="/studio" element={<StudioView />} />
+          <Route path="/all-users" element={<AllUsersView />} />
         </Routes>
       </BrowserRouter>
     </Fragment>

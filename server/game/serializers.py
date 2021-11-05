@@ -1,16 +1,12 @@
-from rest_framework.serializers import (
-    HyperlinkedModelSerializer,
-)
+from rest_framework import serializers
 from game.models import Game
 
 
-class GameSerializer(HyperlinkedModelSerializer):
+class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
         fields = [
             "player",
-            "beat",
-            "created_ay",
-            "finshed_at",
+            "created_at",
             "points_earned",
         ]

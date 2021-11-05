@@ -7,7 +7,7 @@ export const NavigationBar = () => {
       <div>
         <nav class="navbar navbar-dark bg-dark">
           <div class="container-fluid">
-            <Link to ='/home/' class="navbar-brand" >
+            <Link to="/home/" class="navbar-brand">
               🎤CanYouFlow?
             </Link>
             <button
@@ -24,8 +24,13 @@ export const NavigationBar = () => {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <Link to="/home/" style={{ marginRight: "12px", color: "gold" }} class="nav-link active" aria-current="page" href="#">
-                    Home
+                  <Link
+                    to="/studio/"
+                    style={{ marginRight: "12px", color: "gold" }}
+                    class="nav-link active"
+                    aria-current="page"
+                  >
+                    Studio
                   </Link>
                 </li>
                 <li class="nav-item dropdown">
@@ -43,60 +48,18 @@ export const NavigationBar = () => {
                   </Link>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="/all_users/">
+                      <Link to ='/all-users/' class="dropdown-item">
                         Artists
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <Link
-                        to="#"
-                        class="dropdown-item"
-                        href="#"
-                      >
+                      <Link to="#" class="dropdown-item" href="#">
                         Messages
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/dashboard"
-                        class="dropdown-item"
-                        href="#"
-                      >
+                      <Link to="/dashboard" class="dropdown-item" href="#">
                         Video Call
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <Link
-                    to="/dashboard"
-                    style={{ marginRight: "12px", color: "gold" }}
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Studio
-                  </Link>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <Link
-                        to="#"
-                        class="dropdown-item"
-                        href="#"
-                      >
-                        Songs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        class="dropdown-item"
-                        href="#"
-                      >
-                        Add Song
                       </Link>
                     </li>
                   </ul>
