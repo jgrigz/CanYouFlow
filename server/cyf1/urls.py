@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from custom_user_app.urls import urlpatterns as custom_user_urls
-from authentication.urls import urlpatterns as auth_urls
+from authentication.urls import url_patterns as auth_urls
+from game.urls import url_patterns as game_urls
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
 ]
 
-urlpatterns += custom_user_urls
 urlpatterns += auth_urls
+urlpatterns += game_urls
+ 
