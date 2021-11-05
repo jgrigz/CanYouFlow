@@ -1,10 +1,8 @@
-from rest_framework.serializers import (
-    HyperlinkedModelSerializer,
-)
+from rest_framework import serializers 
 from authentication.models import CustomUser
 
 
-class CustomUserSerializer(HyperlinkedModelSerializer):
+class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = [

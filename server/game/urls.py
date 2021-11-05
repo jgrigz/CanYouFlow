@@ -7,6 +7,6 @@ from game.views import CreateGameView, GamesView
 
 #  using regex so it will ONLY work at localhost 5000
 url_patterns = [
-    path("cyf-start-game", CreateGameView.as_view()),
-    path("cyf-all-games", GamesView.as_view())
+    path("cyf-start-game/", CreateGameView.as_view()),
+    path("cyf-all-games/", GamesView.as_view())
 ]

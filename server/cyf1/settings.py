@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'authentication',
     'rest_framework',
     'game',
-    'beat',
 ]
 
 MIDDLEWARE = [
