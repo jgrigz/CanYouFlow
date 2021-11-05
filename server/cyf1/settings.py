@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
-    'custom_user_app',
     'rest_framework',
+    'game',
+    'beat',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +132,6 @@ MEDIA_URL = '/images/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = "custom_user_app.CustomUser"
+AUTH_USER_MODEL = "authentication.CustomUser"
 
 CORS_ORIGIN_ALLOW_ALL = True
