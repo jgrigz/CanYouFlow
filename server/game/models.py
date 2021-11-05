@@ -14,5 +14,8 @@ class Game(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     points_earned = models.IntegerField()
 
+    def awards(self):
+        return f"{self.points_earned} points"
+
     def __str__(self):
-        return self.player
+        return f"Game #{self.id} by {self.player.username}"
